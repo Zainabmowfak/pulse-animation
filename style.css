@@ -1,0 +1,125 @@
+
+body{
+    background-color: #ffffff;
+    min-height: 96vh;
+   
+}
+
+.pulse{
+    position: relative; 
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #fe7e26;
+    
+    
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+        margin-top: 100px;
+        font-size: 50px;
+        color: #ffffff;}
+
+.ring{
+    position:absolute;
+    background-color: inherit;
+    width: 70%;
+    height: 70%;
+    border-radius: 100%;
+    opacity: 0.3;
+  animation: pulse 4s ease-out infinite;
+  z-index: -1;
+  
+}
+.ring:nth-of-type(1){
+    animation-delay: -1s;
+}
+.ring:nth-of-type(2){
+    animation-delay: -2s;
+}
+.ring:nth-of-type(3){
+    animation-delay: -3s;
+}
+@keyframes pulse{
+    100%{
+        transform: scale(2.5);
+        opacity: -10;
+    }
+}
+h1{
+    position:relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+   display: flex;
+   justify-content: center;
+    margin-top: 200px;
+    padding-top: 90px;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 400;
+}
+p{
+    position:relative;
+    display: flex;
+   justify-content: center;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-weight: 400; 
+}
+
+  .btn.transparent {
+    position:relative;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    margin-top: 150px;
+    background-image: linear-gradient(to bottom, #f05e2d 0%, #fe7e26 100%);
+    border: none;
+   color: #ffffff;
+   border-radius: 10px;
+   text-transform: uppercase;
+   font-weight: 400; 
+   cursor: pointer;
+   width: 375px;
+   height: 49px;
+   font-family:'Noto Kufi Arabic', sans-serif;
+   text-decoration: none;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+   -webkit-transition-duration: 0.3s;
+   transition-duration:0.3s;
+   transition-property: box-shadow,transform;
+
+
+  }
+  .btn.transparent:hover, .btn.transparent:focus .btn.transparent:active{
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+-webkit-transform: scale(1);
+transform: scale(1.1);
+
+  }
+  @media (max-width:1200px) {
+    body{
+       
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+      
+    }
+
+    .pulse{
+      position: absolute;
+      top:23%;
+        
+    }
+  }
+ 
